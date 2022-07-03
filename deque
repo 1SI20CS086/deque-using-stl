@@ -1,0 +1,33 @@
+#include<iostream>
+#include<deque> 
+using namespace std;
+
+
+int main()
+{
+   deque<int> d={ 1,2,3,4,5};
+   cout<<"size="<<d.size()<<endl;
+   cout<<"third element="<<d[7]<<endl;
+   cout<<d.front()<<d.back();
+   deque<int> ::reverse_iterator it;
+   for(it=d.rbegin();it!=d.rend();it++)
+   {
+       cout<<*it<<"\t";
+   }
+   cout<<endl;
+   d.push_back(20);
+    d.push_front(10);
+    for(it=d.rbegin();it!=d.rend();it++)
+   {
+       cout<<*it<<"\t";
+   }
+   
+      cout<<endl;
+    d.pop_back();
+    d.pop_front();
+   for(it=d.rbegin();it!=d.rend();it++)
+   {
+       cout<<*it<<"\t";
+   }
+       return 0;
+}
